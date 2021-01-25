@@ -1,15 +1,23 @@
 <template>
   <div id="app">
-   <HelloWorld/>
-   <UserProfile/>
+    <nav>
+      <router-link to="/">
+         <div>Home</div>
+      </router-link>
+     
+    </nav>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <!-- <HelloWorld/> -->
+   <router-view/>
   </div>
 </template>
 
 <script>
-import UserProfile from "./components/UserProfile";
+import HelloWorld from '@/components/HelloWorld.vue'
+
 export default {
-  components: {UserProfile },
   name: 'App',
+  components:{HelloWorld}
 }
 </script>
 
